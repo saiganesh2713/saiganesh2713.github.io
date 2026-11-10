@@ -38,6 +38,15 @@
 @media(prefers-reduced-motion:reduce){.theme-ready .theme-icon{transition:none}.theme-toggle:active:not(:focus-visible){transform:none}}
 @media print{.theme-toggle{display:none}}
 
+
+/* Disclosure feedback keeps the small icon aligned with the text. */
+.project .disclosure{width:24px;height:24px;padding:5px;margin-inline:-5px;border-radius:50%;transition:transform 150ms ease-out,background-color 150ms ease-out,color 150ms ease-out}
+.project summary:active .disclosure{transform:scale(.96)}
+.project summary[aria-expanded="true"] .disclosure{background:var(--avatar);color:var(--green)}
+.project .disclosure .plus{transition:opacity 220ms ease-out,transform 220ms cubic-bezier(.2,0,0,1)}
+.project.is-instant .disclosure{transition:none}
+@media(hover:hover) and (pointer:fine){.project summary:hover .disclosure{background:var(--avatar);color:var(--green)}}
+@media(prefers-reduced-motion:reduce){.project .disclosure,.project .disclosure .plus{transition:none}.project summary:active .disclosure{transform:none}}
 </style>
 </head>
 <body>
@@ -112,6 +121,7 @@
         const fromClosed=!item.open;
         const startHeight=item.getBoundingClientRect().height;
         const startOpacity=fromClosed?0:parseFloat(getComputedStyle(body).opacity);
+        const startTransform=fromClosed?'translateY(-6px)':getComputedStyle(body).transform;
         stopAnimations();
         cancelAnimationFrame(instantFrame);
         desired=open;
@@ -132,10 +142,13 @@
         item.style.overflow='hidden';
         item.classList.toggle('is-collapsing',!open);
         heightAnimation=item.animate([{height:startHeight+'px'},{height:endHeight+'px'}],{
-          duration:260,easing:'cubic-bezier(.2,0,0,1)',fill:'both'
+          duration:open?280:220,easing:'cubic-bezier(.2,0,0,1)',fill:'both'
         });
-        contentAnimation=body.animate([{opacity:startOpacity},{opacity:open?1:0}],{
-          duration:open?200:140,easing:'ease-out',fill:'both'
+        contentAnimation=body.animate([
+          {opacity:startOpacity,transform:startTransform},
+          {opacity:open?1:0,transform:open?'translateY(0)':'translateY(-4px)'}
+        ],{
+          duration:open?240:150,easing:'cubic-bezier(.2,0,0,1)',fill:'both'
         });
         heightAnimation.onfinish=finish;
       };
