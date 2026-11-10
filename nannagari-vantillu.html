@@ -59,7 +59,7 @@
 <dl class="case-meta"><div><dt>My contribution</dt><dd>Project direction, UX refinement and AI-assisted development</dd></div><div><dt>Scope</dt><dd>Menu discovery, favourites, visit information and a selection basket</dd></div><div><dt>Project stage</dt><dd>Working prototype; guest validation is next</dd></div><div><dt>Built with</dt><dd>React Native / Expo, TypeScript and AI-assisted coding tools</dd></div></dl>
 </header>
 <figure class="case-figure case-cover"><a href="assets/nannagari-preview.webp" target="_blank" rel="noopener" aria-label="Open the desktop menu preview at full size"><img src="assets/nannagari-preview.webp" width="1320" height="917" alt="Desktop menu preview with search, dietary filters, dish categories, prices and food images" fetchpriority="high"></a><figcaption>Desktop menu development preview. Food imagery is generated and illustrative.</figcaption></figure>
-<nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#decisions">Design decisions</a><a href="#mobile">Mobile iteration</a><a href="#validation">Validation & next steps</a></nav>
+<nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#decisions">Design decisions</a><a href="#mobile">Mobile iteration</a><a href="#walkthrough">Experience review</a><a href="#validation">Validation & next steps</a></nav>
 <section class="case-section" id="context" aria-labelledby="context-title"><h2 id="context-title">The starting point</h2>
 <p>Nannagari Vantillu is an Andhra restaurant project. The supplied menu contains 37 entries across eight categories, including starters, sangati combinations, meals, biryanis and extras. Some items have availability restrictions; daily specials need a confirmed price.</p>
 <p>The design challenge was to organise that information for guests with different intentions: someone who knows the dish they want, someone browsing a category, and someone narrowing choices by diet.</p>
@@ -87,6 +87,19 @@
 <section class="case-section" id="selection" aria-labelledby="selection-title"><h2 id="selection-title">Make selection clear before adding checkout</h2>
 <p>Guests can add dishes, change quantities and keep a selection on the device. The basket calculates a subtotal for priced items. Unpriced daily specials are excluded and flagged for confirmation.</p>
 <p>The mobile summary explicitly says “Not sent to the restaurant”. The prototype does not submit orders, process payments or notify staff. Keeping that boundary visible is part of the interface design.</p>
+</section>
+<section class="case-section" id="walkthrough" aria-labelledby="walkthrough-title"><h2 id="walkthrough-title">A first review of the experience</h2>
+<p>This is an AI-assisted, scenario-based review of the prototype screenshots and documented behaviour. It is not feedback from restaurant guests or a live usability test. The points below are hypotheses to check with people.</p>
+<h3>Finding lunch has a clear starting point</h3>
+<p>The current mobile screen puts search, a meal price and category shortcuts near the top. These give someone looking for lunch several ways into the menu. I still need to check whether people understand the meal contents and the “Veg &amp; non-veg” label before adding it.</p>
+<p><strong>Next step:</strong> test whether guests can identify the available meal variants and choose the one they want. If the distinction is unclear, make the variant choice explicit before adding a meal.</p>
+<h3>The basket wording could promise too much</h3>
+<p>The dish button says “Add to order”, but the prototype only saves a selection. Even with “Not sent to the restaurant” in the mobile summary, that first label could create an expectation that ordering is available.</p>
+<p><strong>Proposed change:</strong> try “Add to selection” and keep the unsent status visible in the basket. Ask people to explain what happens next, in their own words. This wording change has not yet been implemented in the restaurant prototype.</p>
+<h3>Saving a dish needs a clear return path</h3>
+<p>The heart icon and count offer a compact way to reach favourites. The question is whether a first-time visitor recognises that route and understands that saved dishes stay on the same device.</p>
+<p><strong>Proposed change:</strong> test a short “Saved on this device” confirmation after the first save. Check whether someone can leave the menu and find that dish again without prompting.</p>
+<p>These review notes help prioritise the next round of testing. They do not establish that guests encountered these issues, or that the proposed changes improve the experience.</p>
 </section>
 <section class="case-section" id="validation" aria-labelledby="validation-title"><h2 id="validation-title">What is working, and what remains to validate</h2>
 <p>The result is a working discovery and selection prototype. The automated integration checks passed during preparation of this case study. They cover menu filters, restaurant-local opening hours, delivery URL handling, motion logic, basket restoration, quantities and mixed-price subtotals.</p>
