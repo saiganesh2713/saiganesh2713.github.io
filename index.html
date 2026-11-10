@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#fcfcfc">
+<script>
+(()=>{let theme='light';try{if(localStorage.getItem('saiganesh-portfolio-theme')==='dark')theme='dark';}catch{}document.documentElement.dataset.theme=theme;document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#171a18':'#fcfcfc';})();
+</script>
 <meta name="description" content="SaiGanesh Kalimisetty — MSc Product Management & UX Design student in Paris. Restaurant website projects, experience in retail and hospitality, and education.">
 <title>SaiGanesh Kalimisetty — Product Management & UX Design</title>
 <link rel="canonical" href="https://saiganesh2713.github.io/">
@@ -22,12 +25,25 @@
 @media print{.page{margin:30px auto;width:100%;max-width:640px}.copy-button,.copy-feedback,.skip{display:none}.project-body{display:block}.section{break-inside:avoid}}
 /* Experience and education follow the Projects disclosure pattern. */
 .experience-list li+li,.education-list li+li{margin-top:0}.employer-initial{display:grid;place-items:center;background:var(--hover);color:var(--muted);font-size:12px;font-weight:500;line-height:1}.experience-item .status,.education-item .status{max-width:none;white-space:nowrap;font-size:11px;font-variant-numeric:tabular-nums}
+
+/* Light and dark modes share the same layout and semantic colors. */
+:root{--surface:#fff;--link-line:#b6bdb8;--image-outline:#0000001a;--control-shadow:0 0 0 1px #00000010,0 1px 2px #00000006}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#171a18;--ink:#ededeb;--muted:#b0b8b1;--line:#343a35;--hover:#252b26;--green:#b1d0bb;--avatar:#2d3931;--surface:#202621;--link-line:#647068;--image-outline:#ffffff1a;--control-shadow:0 0 0 1px #ffffff20}
+@supports(color:oklch(50% 0 0)){:root[data-theme="dark"]{--paper:oklch(18% .005 155);--ink:oklch(94% .003 145);--muted:oklch(74% .009 145);--line:oklch(31% .008 145);--hover:oklch(25% .009 145);--green:oklch(80% .045 155);--avatar:oklch(29% .02 155);--surface:oklch(23% .008 155);--image-outline:oklch(1 0 0 / .1)}}
+.inline-link{text-decoration-color:var(--link-line)}img{outline-color:var(--image-outline)}.project-icon{outline:none}.contact-bar{background:var(--surface);box-shadow:var(--control-shadow)}.email-action{color:var(--paper)}
+.identity-copy{flex:1}.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:none;margin-left:auto;min-width:80px;height:40px;padding:9px 12px;border:0;border-radius:21px;background:var(--surface);color:var(--ink);box-shadow:var(--control-shadow);font-size:12px;line-height:1;transition:transform 150ms ease-out;touch-action:manipulation}.theme-toggle:active:not(:focus-visible){transform:scale(.96)}.theme-symbol{position:relative;display:block;width:18px;height:18px;flex:none}.theme-icon{position:absolute;inset:0;width:18px;height:18px;opacity:0;scale:.25;filter:blur(4px);pointer-events:none}.theme-icon svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.theme-sun{opacity:1;scale:1;filter:blur(0)}[data-theme="dark"] .theme-sun{opacity:0;scale:.25;filter:blur(4px)}[data-theme="dark"] .theme-moon{opacity:1;scale:1;filter:blur(0)}.theme-ready .theme-icon{transition:opacity 300ms cubic-bezier(.2,0,0,1),scale 300ms cubic-bezier(.2,0,0,1),filter 300ms cubic-bezier(.2,0,0,1)}
+:root.theme-switching *:not(.theme-icon),:root.theme-switching *::before,:root.theme-switching *::after{transition:none!important}.theme-instant .theme-icon{transition:none!important}
+@media(hover:hover) and (pointer:fine){.theme-toggle:hover{background:var(--hover)}}
+@media(max-width:480px){.theme-toggle{width:40px;min-width:40px;padding:10px;gap:0}.theme-label{display:none}}
+@media(prefers-reduced-motion:reduce){.theme-ready .theme-icon{transition:none}.theme-toggle:active:not(:focus-visible){transform:none}}
+@media print{.theme-toggle{display:none}}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <main class="page" id="main">
-<header class="identity" id="top"><a class="initials" href="#about" aria-label="About SaiGanesh Kalimisetty">sk</a><div class="identity-copy"><h1>SaiGanesh Kalimisetty</h1><p>Product Management & UX Design</p></div></header>
+<header class="identity" id="top"><a class="initials" href="#about" aria-label="About SaiGanesh Kalimisetty">sk</a><div class="identity-copy"><h1>SaiGanesh Kalimisetty</h1><p>Product Management & UX Design</p></div><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-symbol" aria-hidden="true"><span class="theme-icon theme-sun"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="theme-icon theme-moon"><svg viewBox="0 0 24 24"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg></span></span><span class="theme-label">Light</span></button></header>
 <section class="intro" id="about" aria-label="About me">
 <p>I’m an MSc Product Management & UX Design student at <a class="inline-link" href="https://www.skema.edu/en/programmes/msc-product-management-ux-design" target="_blank" rel="noopener noreferrer">SKEMA</a> × <a class="inline-link" href="https://www.gsom.polimi.it/en" target="_blank" rel="noopener noreferrer">POLIMI</a>. I’m interested in how business decisions and design shape the way people experience a service. I also enjoy working with AI tools and learning how to apply them thoughtfully in product development and UX design.</p>
 <p>My background is in retail and hospitality, with experience at Snowflake, Harvey Nichols, Portavadie and Reiss. I’ve worked across team training, store operations, guest reservations and visual merchandising. That practical experience is the starting point for my move into product and UX.</p>
@@ -62,8 +78,13 @@
 <script>
 (()=>{const button=document.getElementById('copy-email'),feedback=document.getElementById('copy-feedback');let timer;button.addEventListener('click',async()=>{clearTimeout(timer);try{await navigator.clipboard.writeText('saiganesh.kal@gmail.com');feedback.textContent='Copied to clipboard';}catch{feedback.textContent='Couldn’t copy. Use the email link above.';}timer=setTimeout(()=>{feedback.textContent='';},4500);});document.querySelectorAll('.project-list,.experience-list,.education-list,.skills-list').forEach(list=>{list.querySelectorAll('.project').forEach(item=>{item.addEventListener('toggle',()=>{if(!item.open)return;list.querySelectorAll('.project').forEach(other=>{if(other!==item)other.open=false;});});});});})();
 </script>
+
+<script>
+(()=>{const root=document.documentElement,button=document.getElementById('theme-toggle'),label=button.querySelector('.theme-label'),meta=document.querySelector('meta[name="theme-color"]'),key='saiganesh-portfolio-theme';let settleFrame=0;function sync(){const dark=root.dataset.theme==='dark';const action=dark?'Switch to light mode':'Switch to dark mode';button.setAttribute('aria-label','Dark mode');button.setAttribute('aria-pressed',String(dark));button.title=action;label.textContent=dark?'Dark':'Light';meta.content=dark?'#171a18':'#fcfcfc';}function apply(theme,animate,persist){cancelAnimationFrame(settleFrame);root.classList.add('theme-switching');root.classList.toggle('theme-instant',!animate);void root.offsetHeight;root.dataset.theme=theme;sync();if(persist){try{localStorage.setItem(key,theme);}catch{}}void root.offsetHeight;settleFrame=requestAnimationFrame(()=>{settleFrame=requestAnimationFrame(()=>{root.classList.remove('theme-switching','theme-instant');});});}button.addEventListener('click',event=>apply(root.dataset.theme==='dark'?'light':'dark',event.detail!==0,true));window.addEventListener('storage',event=>{if(event.key===key)apply(event.newValue==='dark'?'dark':'light',false,false);});sync();requestAnimationFrame(()=>root.classList.add('theme-ready'));})();
+</script>
 </body>
 </html>
+
 
 
 
