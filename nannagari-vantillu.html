@@ -7,7 +7,7 @@
 <script>
 (()=>{let theme='light';try{if(localStorage.getItem('saiganesh-portfolio-theme')==='dark')theme='dark';}catch{}document.documentElement.dataset.theme=theme;document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#171a18':'#fcfcfc';})();
 </script>
-<meta name="description" content="A project case study by SaiGanesh Kalimisetty on menu discovery and mobile interface design, developed with support from AI tools.">
+<meta name="description" content="A visual UX case study by SaiGanesh Kalimisetty: wireframes, restaurant prototype screens and mobile design iterations, developed with support from AI tools.">
 <title>Nannagari Vantillu — UX Case Study | SaiGanesh Kalimisetty</title>
 <link rel="canonical" href="https://saiganesh2713.github.io/nannagari-vantillu.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23e9eee9'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' text-anchor='middle' fill='%23365844'%3Esk%3C/text%3E%3C/svg%3E">
@@ -39,10 +39,20 @@
 @media print{.theme-toggle{display:none}}
 
 
-/* A long-form case study within the portfolio's existing visual system. */
-.identity .identity-name{font-size:16px;line-height:1.45;font-weight:500;letter-spacing:-.018em;color:var(--ink);margin:0}.case-back{display:inline-block;font-size:13px;margin:4px 0 25px;text-decoration:none;color:var(--muted)}.case-kind{font-size:12px;margin-bottom:10px;color:var(--green)}.case-intro h1{font-size:36px;line-height:1.12;letter-spacing:-.045em;font-weight:500;margin-bottom:12px}.case-subtitle{font-size:20px;line-height:1.4;letter-spacing:-.025em;color:var(--ink);margin-bottom:17px}.case-intro>p:last-of-type{font-size:15px;line-height:1.7}.case-meta{display:grid;grid-template-columns:1fr 1fr;gap:19px 30px;padding:20px 0;margin:23px 0 0;border-top:1px solid var(--line)}.case-meta dt{color:var(--ink);font-size:12px;font-weight:500;margin-bottom:4px}.case-meta dd{font-size:13px;line-height:1.6;margin:0}.case-figure{margin:22px 0}.case-figure img{width:100%;height:auto;border-radius:7px}.case-figure a{display:block;border-radius:7px}.case-figure figcaption{font-size:12px;line-height:1.6;margin-top:9px}.case-cover{margin-top:8px}.case-contents{display:flex;gap:10px 22px;flex-wrap:wrap;font-size:12px;border-block:1px solid var(--line);padding:15px 0;margin:26px 0 0}.case-contents a{text-decoration:none;padding:3px 0}.case-section{padding-top:31px;scroll-margin-top:20px}.case-section h2{font-size:22px;line-height:1.3;letter-spacing:-.03em;font-weight:500;margin-bottom:15px}.case-section h3{font-size:16px;font-weight:500;margin:24px 0 10px;letter-spacing:-.015em}.case-section p{font-size:15px;line-height:1.75}.case-section p+p{margin-top:14px}.case-section strong{color:var(--ink);font-weight:500}.case-list{padding-left:21px;margin:12px 0 0;line-height:1.7;font-size:14px}.case-list li+li{margin-top:7px}.case-comparison{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:22px 0}.case-comparison .case-figure{margin:0}.comparison-label{font-size:12px!important;color:var(--ink);font-weight:500;margin-bottom:10px}.case-comparison img{border-radius:8px}.case-table-wrap{margin:22px 0}.case-table{border-collapse:collapse;width:100%;text-align:left;font-size:13px;line-height:1.65}.case-table th,.case-table td{border-bottom:1px solid var(--line);vertical-align:top;padding:12px 12px 12px 0}.case-table th{color:var(--ink);font-weight:500}.case-table tbody th{width:37%}.case-table thead th{font-size:12px;padding-top:0}.case-section>.inline-link{display:inline-block;margin-top:21px;font-size:14px}.case-study+.section{margin-top:38px}.case-study .case-back:hover,.case-contents a:hover{text-decoration:underline;text-underline-offset:4px}.case-study .case-figure a:focus-visible{outline-offset:5px}
-@media(max-width:480px){.case-intro h1{font-size:30px}.case-subtitle{font-size:18px}.case-meta{grid-template-columns:1fr;gap:15px}.case-comparison{grid-template-columns:1fr;gap:27px}.case-comparison .case-figure{max-width:280px;width:100%;margin-inline:auto}.case-section h2{font-size:21px}.case-table{font-size:12px}.case-contents{gap:8px 15px}.case-section{padding-top:27px}.identity .identity-name{font-size:15px}}
-
+/* A visual case study: screens first, short captions second. */
+.page{width:min(960px,calc(100% - 48px));margin-top:64px}
+.identity{margin-bottom:35px}.identity .identity-name{font-size:16px;line-height:1.45;font-weight:500;color:var(--ink)}
+.case-back{display:inline-block;font-size:13px;text-decoration:none;margin-bottom:30px}.case-back:hover{text-decoration:underline}
+.case-kind{color:var(--green);font-size:12px;margin-bottom:12px}.case-intro h1{font-size:42px;line-height:1.12;letter-spacing:-.045em;font-weight:500}
+.case-subtitle{font-size:23px;line-height:1.4;color:var(--ink);max-width:620px;margin:12px 0}
+.case-intro>p:last-of-type{max-width:620px;font-size:15px;line-height:1.7}
+.case-meta{display:flex;flex-wrap:wrap;gap:15px 40px;margin:24px 0 28px;padding:0}.case-meta div{min-width:140px}.case-meta dt{font-size:11px;margin-bottom:4px}.case-meta dd{font-size:13px;margin:0;color:var(--ink)}
+.case-figure{margin:0}.case-figure a{display:block;border-radius:9px}.case-figure img{width:100%;height:auto;border-radius:9px}.case-figure figcaption{font-size:12px;line-height:1.6;margin-top:10px;max-width:650px}
+.case-contents{display:flex;gap:12px 24px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid var(--line);margin-top:10px;font-size:13px}.case-contents a{text-decoration:none}.case-contents a:hover{color:var(--green);text-decoration:underline;text-underline-offset:4px}
+.case-section{padding-top:42px;scroll-margin-top:20px}.case-section h2{font-size:24px;font-weight:500;line-height:1.3;letter-spacing:-.025em;margin-bottom:9px}.case-section>p{max-width:620px;line-height:1.65;font-size:14px;margin-bottom:22px}
+.wireframe-board{overflow-x:auto;border-radius:10px;background:#f3f4f3}.wireframe-board img{width:100%;min-width:740px;outline:none}.wireframe-board:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+.phone-gallery{display:grid;grid-template-columns:1fr 1fr;gap:32px;background:var(--hover);border:1px solid var(--line);border-radius:12px;padding:28px 38px}.phone-gallery .case-figure{max-width:290px;width:100%;margin-inline:auto}.screen-title{color:var(--ink);font-size:14px;font-weight:500;margin-bottom:12px}.phone-gallery figcaption{font-size:12px;line-height:1.6}.case-next{border-top:1px solid var(--line);margin-top:40px;padding-top:22px}.case-next p{font-size:13px;line-height:1.65;max-width:660px}.case-next p+p{margin-top:10px}.case-next .inline-link{display:inline-block;margin-top:20px;font-size:14px}.case-study+.section{margin-top:34px}
+@media(max-width:600px){.page{width:calc(100% - 36px);margin-top:36px}.case-intro h1{font-size:32px}.case-subtitle{font-size:20px}.case-meta{gap:14px 24px}.case-section{padding-top:32px}.case-section h2{font-size:22px}.phone-gallery{gap:30px;grid-template-columns:1fr;padding:24px}.phone-gallery .case-figure{max-width:300px}.identity .identity-name{font-size:15px}.wireframe-board img{min-width:740px}}
 </style>
 </head>
 <body>
@@ -51,70 +61,13 @@
 <header class="identity" id="top"><a class="initials" href="./#about" aria-label="Back to SaiGanesh’s portfolio">sk</a><div class="identity-copy"><p class="identity-name">SaiGanesh Kalimisetty</p><p>Product Management & UX Design</p></div><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-symbol" aria-hidden="true"><span class="theme-icon theme-sun"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="theme-icon theme-moon"><svg viewBox="0 0 24 24"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg></span></span></button></header>
 <article class="case-study" aria-labelledby="case-title">
 <a class="case-back" href="./#work">← Back to portfolio</a>
-<header class="case-intro">
-<p class="case-kind">Personal project · In development</p>
-<h1 id="case-title">Nannagari Vantillu</h1>
-<p class="case-subtitle">Designing a mobile-friendly way to explore an Andhra menu.</p>
-<p>A restaurant prototype built around a practical question: how can guests find a dish, compare their options and keep a selection without losing the character of the restaurant?</p>
-<dl class="case-meta"><div><dt>My contribution</dt><dd>Project direction, UX refinement and development with AI support</dd></div><div><dt>Scope</dt><dd>Menu discovery, favourites, visit information and a selection basket</dd></div><div><dt>Project stage</dt><dd>Working prototype; guest validation is next</dd></div><div><dt>Built with</dt><dd>React Native / Expo and TypeScript, with support from AI tools</dd></div></dl>
-</header>
-<figure class="case-figure case-cover"><a href="assets/nannagari-preview.webp" target="_blank" rel="noopener" aria-label="Open the desktop menu preview at full size"><img src="assets/nannagari-preview.webp" width="1320" height="917" alt="Desktop menu preview with search, dietary filters, dish categories, prices and food images" fetchpriority="high"></a><figcaption>Desktop menu development preview. Food imagery is generated and illustrative.</figcaption></figure>
-<nav class="case-contents" aria-label="Case study sections"><a href="#context">Context</a><a href="#decisions">Design decisions</a><a href="#mobile">Mobile iteration</a><a href="#walkthrough">Experience review</a><a href="#validation">Validation & next steps</a></nav>
-<section class="case-section" id="context" aria-labelledby="context-title"><h2 id="context-title">The starting point</h2>
-<p>Nannagari Vantillu is an Andhra restaurant project. The supplied menu contains 37 entries across eight categories, including starters, sangati combinations, meals, biryanis and extras. Some items have availability restrictions; daily specials need a confirmed price.</p>
-<p>The design challenge was to organise that information for guests with different intentions: someone who knows the dish they want, someone browsing a category, and someone narrowing choices by diet.</p>
-<p>My working hypothesis is that clear search, separate dietary filters and familiar categories can make this menu easier to explore. This is informed by the supplied menu and my hospitality background; interviews and usability testing with guests are still to come.</p>
-<h3>What I wanted the experience to support</h3>
-<ul class="case-list"><li>Find dishes by name, category or dietary preference.</li><li>Compare prices and availability without opening every item.</li><li>Save favourites or build a selection without creating an account.</li><li>Reach useful visit and contact information when needed.</li></ul>
-</section>
-<section class="case-section" id="contribution" aria-labelledby="contribution-title"><h2 id="contribution-title">My contribution and use of AI</h2>
-<p>I set the project direction, reviewed the interface and refined the experience through iterative feedback. I used AI tools to help develop the working screens and interactions, reviewing and refining the results as the project progressed.</p>
-<p>My contribution centred on the information presented to guests, navigation, mobile layout, visual direction and interface wording. I received help from AI tools with implementation and used AI-generated food images as illustrations. The prototype uses React Native / Expo and TypeScript, with browser previews of the shared screens.</p>
-</section>
-<section class="case-section" id="decisions" aria-labelledby="decisions-title"><h2 id="decisions-title">The decisions behind the interface</h2>
-<h3>Keep dietary choices separate from dish categories</h3>
-<p>“Veg” and “Biryani” answer different questions. The menu therefore has one set of dietary controls and another for dish categories, alongside text search. Guests can combine them to narrow the same menu.</p>
-<p>Conflicting choices lead to an explicit empty state with a way to browse all dishes again. Items without a supplied dietary label remain in “All diets”; the interface does not guess. The meals entry can appear under both veg and non-veg because the menu lists both variants.</p>
-<h3>Save favourites without sign-in</h3>
-<p>The current version saves favourites on the device. This keeps account setup out of the browsing flow and lets a guest return to a dish on the same browser or device.</p>
-<p><strong>The trade-off:</strong> favourites do not sync across devices, and clearing local storage removes them. This keeps the prototype simple while limiting continuity between devices.</p>
-</section>
-<section class="case-section" id="mobile" aria-labelledby="mobile-title"><h2 id="mobile-title">Adapting the experience for phones</h2>
-<p>The earlier mobile exploration devoted most of the first screen to the brand introduction and platter. The refined home brings search, meal information and category shortcuts into view earlier, with compact food rows and persistent Home, Menu and Visit navigation.</p>
-<div class="case-comparison"><figure class="case-figure"><p class="comparison-label">Earlier mobile exploration</p><a href="assets/nannagari-mobile-before.webp" target="_blank" rel="noopener" aria-label="Open the earlier mobile exploration at full size"><img src="assets/nannagari-mobile-before.webp" width="390" height="844" loading="lazy" alt="Earlier mobile home screen with a tall introduction and large platter occupying the first viewport"></a><figcaption>The brand story and platter dominate the first screen.</figcaption></figure><figure class="case-figure"><p class="comparison-label">Current local prototype</p><a href="assets/nannagari-mobile-current.webp" target="_blank" rel="noopener" aria-label="Open the current mobile prototype at full size"><img src="assets/nannagari-mobile-current.webp" width="390" height="844" loading="lazy" alt="Refined mobile home with menu search, lunch information, meal category shortcuts and a compact dish row"></a><figcaption>Search, meal details and category shortcuts have earlier prominence.</figcaption></figure></div>
-<p>The current visual direction uses forest green, ivory and brass. The aim is to retain the restaurant’s identity while giving food discovery more space. This is an interface iteration; its effect on usability has not yet been measured with guests.</p>
-</section>
-<section class="case-section" id="selection" aria-labelledby="selection-title"><h2 id="selection-title">Make selection clear before adding checkout</h2>
-<p>Guests can add dishes, change quantities and keep a selection on the device. The basket calculates a subtotal for priced items. Unpriced daily specials are excluded and flagged for confirmation.</p>
-<p>The mobile summary explicitly says “Not sent to the restaurant”. The prototype does not submit orders, process payments or notify staff. Keeping that boundary visible is part of the interface design.</p>
-</section>
-<section class="case-section" id="walkthrough" aria-labelledby="walkthrough-title"><h2 id="walkthrough-title">A first review of the experience</h2>
-<p>This is an AI-assisted, scenario-based review of the prototype screenshots and documented behaviour. It is not feedback from restaurant guests or a live usability test. The points below are hypotheses to check with people.</p>
-<h3>Finding lunch has a clear starting point</h3>
-<p>The current mobile screen puts search, a meal price and category shortcuts near the top. These give someone looking for lunch several ways into the menu. I still need to check whether people understand the meal contents and the “Veg &amp; non-veg” label before adding it.</p>
-<p><strong>Next step:</strong> test whether guests can identify the available meal variants and choose the one they want. If the distinction is unclear, make the variant choice explicit before adding a meal.</p>
-<h3>The basket wording could promise too much</h3>
-<p>The dish button says “Add to order”, but the prototype only saves a selection. Even with “Not sent to the restaurant” in the mobile summary, that first label could create an expectation that ordering is available.</p>
-<p><strong>Proposed change:</strong> try “Add to selection” and keep the unsent status visible in the basket. Ask people to explain what happens next, in their own words. This wording change has not yet been implemented in the restaurant prototype.</p>
-<h3>Saving a dish needs a clear return path</h3>
-<p>The heart icon and count offer a compact way to reach favourites. The question is whether a first-time visitor recognises that route and understands that saved dishes stay on the same device.</p>
-<p><strong>Proposed change:</strong> test a short “Saved on this device” confirmation after the first save. Check whether someone can leave the menu and find that dish again without prompting.</p>
-<p>These review notes help prioritise the next round of testing. They do not establish that guests encountered these issues, or that the proposed changes improve the experience.</p>
-</section>
-<section class="case-section" id="validation" aria-labelledby="validation-title"><h2 id="validation-title">What is working, and what remains to validate</h2>
-<p>The result is a working discovery and selection prototype. The automated integration checks passed during preparation of this case study. They cover menu filters, restaurant-local opening hours, delivery URL handling, motion logic, basket restoration, quantities and mixed-price subtotals.</p>
-<div class="case-table-wrap"><table class="case-table"><thead><tr><th scope="col">Evidence</th><th scope="col">Current status</th></tr></thead><tbody><tr><th scope="row">Menu and selection logic</th><td>Automated checks passed against the current source.</td></tr><tr><th scope="row">Browser layouts and interactions</th><td>Development reviews are recorded at desktop, 390px and 320px widths.</td></tr><tr><th scope="row">Guest understanding and usability</th><td>Still to be tested with intended users.</td></tr><tr><th scope="row">Native installation and real-device rendering</th><td>Physical iPhone/Android verification and signed builds remain pending.</td></tr></tbody></table></div>
-<p>No improvement in conversion, task speed or sales has been measured. The next useful evidence is how guests understand and use the experience.</p>
-<h3>The next usability tasks</h3>
-<p>I would ask restaurant guests to complete three tasks, then observe their choices, wrong turns and explanations:</p>
-<ol class="case-list"><li>Find a vegetarian biryani and check its price.</li><li>Save a dish, leave the menu and find the saved item again.</li><li>Build a selection containing a daily special, then explain what the subtotal includes and whether the restaurant has received an order.</li></ol>
-<p>The findings would guide the next iteration of filter wording, favourites and selection feedback. Before launch, menu accuracy, allergens, final food photography, asset performance and real-device behaviour also need review.</p>
-</section>
-<section class="case-section" id="reflection" aria-labelledby="reflection-title"><h2 id="reflection-title">What this project is teaching me</h2>
-<p>My hospitality background gives me a practical starting point for the information a guest might need. Building the prototype turns that into concrete interface decisions: what should be visible, what can wait and where the wording needs to be explicit.</p>
-<p>The mobile iteration also shows why visual character and practical tasks need to be considered together. My next priority is feedback from guests on discovery and selection.</p>
-<a class="inline-link" href="./#work">Return to my portfolio</a>
-</section>
+<header class="case-intro"><p class="case-kind">Personal project · In development</p><h1 id="case-title">Nannagari Vantillu</h1><p class="case-subtitle">Helping people find their next Andhra meal.</p><p>I’m designing a restaurant experience that brings menu search, dietary choices and useful visit information together.</p><dl class="case-meta"><div><dt>My focus</dt><dd>UX direction &amp; interface refinement</dd></div><div><dt>Development</dt><dd>With support from AI tools</dd></div><div><dt>Status</dt><dd>Working prototype</dd></div></dl></header>
+<figure class="case-figure"><a href="assets/nannagari-preview.webp" target="_blank" rel="noopener" aria-label="Open the desktop menu prototype at full size"><img src="assets/nannagari-preview.webp" width="1320" height="917" fetchpriority="high" alt="Desktop menu prototype with search, separate dietary and dish-category filters, and food cards"></a><figcaption>Menu prototype — search, diet and dish categories each offer a different way to find food.</figcaption></figure>
+<nav class="case-contents" aria-label="Case study sections"><a href="#wireframes">Wireframes</a><a href="#prototypes">Prototype screens</a><a href="#mobile">Mobile iteration</a></nav>
+<section class="case-section" id="wireframes" aria-labelledby="wireframes-title"><h2 id="wireframes-title">The structure behind the screens</h2><p>Three layout studies showing what belongs on Home, Menu and Visit. Reconstructed from the current prototype to explain the structure.</p><figure class="case-figure"><div class="wireframe-board" tabindex="0" role="region" aria-label="Wireframe board; scroll horizontally on small screens"><a href="assets/nannagari-wireframes.svg" target="_blank" rel="noopener" aria-label="Open the three wireframes at full size"><img src="assets/nannagari-wireframes.svg" width="920" height="650" loading="lazy" alt="Home, Menu and Visit wireframes showing content hierarchy, search, filters, dish cards and visit information"></a></div><figcaption>Home introduces the food. Menu helps narrow the choice. Visit supports the practical next step.</figcaption></figure></section>
+<section class="case-section" id="prototypes" aria-labelledby="prototypes-title"><h2 id="prototypes-title">From structure to prototype</h2><p>Forest green, ivory and food imagery give the interface its character. Open any screen to see it at full size.</p><div class="phone-gallery"><figure class="case-figure"><h3 class="screen-title">Home</h3><a href="assets/nannagari-mobile-current.webp" target="_blank" rel="noopener" aria-label="Open home at full size"><img src="assets/nannagari-mobile-current.webp" width="390" height="844" loading="lazy" alt="Mobile home prototype showing search, a featured meal and category shortcuts"></a><figcaption>Search, meal pricing and category shortcuts appear early.</figcaption></figure><figure class="case-figure"><h3 class="screen-title">Visit</h3><a href="assets/nannagari-visit.webp" target="_blank" rel="noopener" aria-label="Open visit at full size"><img src="assets/nannagari-visit.webp" width="390" height="844" loading="lazy" alt="Mobile Visit prototype showing restaurant introduction, directions and menu links"></a><figcaption>A restaurant welcome, with clear routes to directions and the menu.</figcaption></figure></div></section>
+<section class="case-section" id="mobile" aria-labelledby="mobile-title"><h2 id="mobile-title">Less introduction. More useful choices.</h2><p>I reduced the space given to the opening brand story so search and food discovery could appear sooner.</p><div class="phone-gallery"><figure class="case-figure"><h3 class="screen-title">Earlier exploration</h3><a href="assets/nannagari-mobile-before.webp" target="_blank" rel="noopener" aria-label="Open earlier exploration at full size"><img src="assets/nannagari-mobile-before.webp" width="390" height="844" loading="lazy" alt="Earlier mobile exploration with a long introduction and large food platter"></a><figcaption>The introduction and platter take most of the first screen.</figcaption></figure><figure class="case-figure"><h3 class="screen-title">Refined prototype</h3><a href="assets/nannagari-mobile-current.webp" target="_blank" rel="noopener" aria-label="Open refined prototype at full size"><img src="assets/nannagari-mobile-current.webp" width="390" height="844" loading="lazy" alt="Refined mobile prototype with search and food discovery earlier in the layout"></a><figcaption>Search, price and browsing shortcuts move into the first screen.</figcaption></figure></div></section>
+<section class="case-next" id="validation" aria-label="Project status and next step"><span id="walkthrough"></span><p><strong>Next:</strong> test how guests find a dish, return to favourites and understand their selection. Guest usability testing is still ahead.</p><p>These are development screens. The prototype does not send orders; food images are illustrative and created with AI tools.</p><a class="inline-link" href="./#work">Return to my portfolio</a></section>
 </article>
 
 <section class="section" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Get in touch</h2><p class="contact-copy">Have a question about my work or something you’d like to share? Send me an email.</p><div class="contact-bar"><a class="contact-email" href="mailto:saiganesh.kal@gmail.com">saiganesh.kal@gmail.com</a><a class="email-action" href="mailto:saiganesh.kal@gmail.com">Say hello</a></div><div class="contact-options"><button class="copy-button" id="copy-email" type="button">Copy email address</button><span class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></span></div></section>
@@ -128,80 +81,12 @@
 <script>
 (()=>{const root=document.documentElement,button=document.getElementById('theme-toggle'),meta=document.querySelector('meta[name="theme-color"]'),key='saiganesh-portfolio-theme';let settleFrame=0;function sync(){const dark=root.dataset.theme==='dark';const action=dark?'Switch to light mode':'Switch to dark mode';button.setAttribute('aria-label','Dark mode');button.setAttribute('aria-pressed',String(dark));button.title=action;meta.content=dark?'#171a18':'#fcfcfc';}function apply(theme,animate,persist){cancelAnimationFrame(settleFrame);root.classList.add('theme-switching');root.classList.toggle('theme-instant',!animate);void root.offsetHeight;root.dataset.theme=theme;sync();if(persist){try{localStorage.setItem(key,theme);}catch{}}void root.offsetHeight;settleFrame=requestAnimationFrame(()=>{settleFrame=requestAnimationFrame(()=>{root.classList.remove('theme-switching','theme-instant');});});}button.addEventListener('click',event=>apply(root.dataset.theme==='dark'?'light':'dark',event.detail!==0,true));window.addEventListener('storage',event=>{if(event.key===key)apply(event.newValue==='dark'?'dark':'light',false,false);});sync();requestAnimationFrame(()=>root.classList.add('theme-ready'));})();
 </script>
-<script>
-(()=>{
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  const allControls=[];
-  document.querySelectorAll('.project-list,.experience-list,.education-list,.skills-list').forEach(list=>{
-    const controls=new Map();
-    list.querySelectorAll('.project').forEach(item=>{
-      const summary=item.querySelector('summary');
-      const body=item.querySelector('.project-body');
-      let desired=item.open;
-      let heightAnimation=null;
-      let contentAnimation=null;
-      let instantFrame=0;
-      const stopAnimations=()=>{
-        if(heightAnimation){heightAnimation.onfinish=null;heightAnimation.cancel();heightAnimation=null;}
-        if(contentAnimation){contentAnimation.cancel();contentAnimation=null;}
-      };
-      const finish=()=>{
-        item.open=desired;
-        stopAnimations();
-        item.style.removeProperty('height');
-        item.style.removeProperty('overflow');
-        item.classList.remove('is-collapsing');
-        summary.setAttribute('aria-expanded',String(desired));
-      };
-      const setExpanded=(open,animate=true)=>{
-        if(desired===open&&!heightAnimation)return;
-        const fromClosed=!item.open;
-        const startHeight=item.getBoundingClientRect().height;
-        const startOpacity=fromClosed?0:parseFloat(getComputedStyle(body).opacity);
-        stopAnimations();
-        cancelAnimationFrame(instantFrame);
-        desired=open;
-        summary.setAttribute('aria-expanded',String(open));
-        const moving=animate&&!reduced.matches&&typeof item.animate==='function';
-        item.classList.toggle('is-instant',!moving);
-        if(!moving){
-          finish();
-          instantFrame=requestAnimationFrame(()=>{instantFrame=requestAnimationFrame(()=>item.classList.remove('is-instant'));});
-          return;
-        }
-        item.classList.remove('is-instant');
-        item.open=true;
-        item.style.height='auto';
-        item.style.removeProperty('overflow');
-        const endHeight=open?item.getBoundingClientRect().height:summary.getBoundingClientRect().height;
-        item.style.height=startHeight+'px';
-        item.style.overflow='hidden';
-        item.classList.toggle('is-collapsing',!open);
-        heightAnimation=item.animate([{height:startHeight+'px'},{height:endHeight+'px'}],{
-          duration:260,easing:'cubic-bezier(.2,0,0,1)',fill:'both'
-        });
-        contentAnimation=body.animate([{opacity:startOpacity},{opacity:open?1:0}],{
-          duration:open?200:140,easing:'ease-out',fill:'both'
-        });
-        heightAnimation.onfinish=finish;
-      };
-      const control={setExpanded,finish};
-      controls.set(item,control);
-      allControls.push(control);
-      summary.setAttribute('aria-expanded',String(desired));
-      summary.addEventListener('click',event=>{
-        event.preventDefault();
-        const open=!desired;
-        const animate=event.detail!==0;
-        if(open)controls.forEach((other,element)=>{if(element!==item)other.setExpanded(false,animate);});
-        setExpanded(open,animate);
-      });
-    });
-  });
-  reduced.addEventListener('change',()=>{if(reduced.matches)allControls.forEach(control=>control.finish());});
-  window.addEventListener('resize',()=>allControls.forEach(control=>control.finish()),{passive:true});
-})();
 
-</script>
 </body>
 </html>
+
+
+
+
+
+
