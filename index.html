@@ -167,7 +167,7 @@
       cancelOpen();
       openTimer=setTimeout(()=>{
         if(item.matches(':hover'))setExpanded(true);
-      },300);
+      },500);
     });
     summary.addEventListener('pointerleave',cancelOpen);
     item.addEventListener('pointerenter',cancelLeave);
