@@ -111,6 +111,7 @@
     let closeTimer=0;
     let instantFrame=0;
     let leaveTimer=0;
+    let openTimer=0;
     let pinned=false;
     panel.id='disclosure-panel-'+index;
     summary.setAttribute('aria-controls',panel.id);
@@ -152,17 +153,23 @@
       if(event.target===panel&&event.propertyName==='grid-template-rows')settle();
     });
     const cancelLeave=()=>clearTimeout(leaveTimer);
+    const cancelOpen=()=>clearTimeout(openTimer);
     const leave=()=>{
+      cancelOpen();
       cancelLeave();
       leaveTimer=setTimeout(()=>{
         if(!pinned&&!panel.contains(document.activeElement))setExpanded(false);
-      },180);
+      },350);
     };
     summary.addEventListener('pointerenter',event=>{
       if(!hover.matches||event.pointerType==='touch')return;
       cancelLeave();
-      setExpanded(true);
+      cancelOpen();
+      openTimer=setTimeout(()=>{
+        if(item.matches(':hover'))setExpanded(true);
+      },300);
     });
+    summary.addEventListener('pointerleave',cancelOpen);
     item.addEventListener('pointerenter',cancelLeave);
     item.addEventListener('pointerleave',event=>{
       if(hover.matches&&event.pointerType!=='touch')leave();
@@ -172,6 +179,7 @@
     });
     summary.addEventListener('click',event=>{
       event.preventDefault();
+      cancelOpen();
       cancelLeave();
       // Clicking pins a hover preview; tapping or using the keyboard toggles it.
       if(hover.matches&&event.detail!==0){
@@ -184,6 +192,7 @@
     });
     item.addEventListener('keydown',event=>{
       if(event.key!=='Escape')return;
+      cancelOpen();
       cancelLeave();
       pinned=false;
       setExpanded(false,false);
