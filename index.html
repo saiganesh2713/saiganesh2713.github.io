@@ -102,6 +102,7 @@
 (()=>{
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const controls=[];
+  const rows=[];
   const hover=matchMedia('(hover: hover) and (pointer: fine)');
   document.querySelectorAll('details.project').forEach((item,index)=>{
     const summary=item.querySelector('summary');
@@ -127,6 +128,7 @@
     };
     const setExpanded=(open,animate=true)=>{
       if(open===expanded)return;
+      if(open)rows.forEach(row=>{if(row.item!==item)row.close();});
       clearTimeout(closeTimer);
       cancelAnimationFrame(instantFrame);
       const moving=animate&&!reduced.matches;
@@ -181,14 +183,9 @@
       event.preventDefault();
       cancelOpen();
       cancelLeave();
-      // Clicking pins a hover preview; tapping or using the keyboard toggles it.
-      if(hover.matches&&event.detail!==0){
-        pinned=!pinned;
-        setExpanded(pinned);
-      }else{
-        pinned=!expanded;
-        setExpanded(pinned,event.detail!==0);
-      }
+      // Clicking an open row collapses it; opening another resets the previous row.
+      pinned=!expanded;
+      setExpanded(pinned,event.detail!==0);
     });
     item.addEventListener('keydown',event=>{
       if(event.key!=='Escape')return;
@@ -198,6 +195,12 @@
       setExpanded(false,false);
       summary.focus({preventScroll:true});
     });
+    rows.push({item,close:()=>{
+      cancelOpen();
+      cancelLeave();
+      pinned=false;
+      setExpanded(false,false);
+    }});
     controls.push(()=>{
       item.classList.add('is-instant');
       settle();
